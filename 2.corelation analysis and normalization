@@ -1,0 +1,18 @@
+# Load the necessary libraries
+library(dplyr)
+library(tidyr)
+
+# Load the data into a data frame
+df <- read.csv("data.csv")
+
+# Perform correlation analysis
+cor_matrix <- cor(df)
+
+# Perform normalization using the z-score method
+normalized_df <- as.data.frame(scale(df))
+normalized_df <- cbind(normalized_df, row.names = df$row.names)
+names(normalized_df) <- colnames(df)
+
+# Print the results
+print(cor_matrix)
+print(normalized_df)
