@@ -1,0 +1,5 @@
+nam<-c("car","bike","bycycle","auto")
+nof<-c(45,78,65,53)
+colorsfor<-c("yellow","red","blue","green")
+barplot(nof,main="sales",names.arg=nam,col=colorsfor)
+legend("topright",nam,cex=0.5,fill=colorsfor)
