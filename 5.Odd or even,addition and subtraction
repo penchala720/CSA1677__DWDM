@@ -1,0 +1,31 @@
+# Function to determine if a number is odd or even
+odd_even <- function(x) {
+  if (x %% 2 == 0) {
+    return("Even")
+  } else {
+    return("Odd")
+  }
+}
+
+# Function to perform subtraction
+subtraction <- function(a, b) {
+  return(a - b)
+}
+
+# Function to perform addition
+addition <- function(a, b) {
+  return(a + b)
+}
+
+# Test the functions
+x <- 5
+result_odd_even <- odd_even(x)
+cat(paste("The number", x, "is", result_odd_even, "\n"))
+
+a <- 10
+b <- 5
+result_subtraction <- subtraction(a, b)
+cat(paste("The result of", a, "-", b, "is", result_subtraction, "\n"))
+
+result_addition <- addition(a, b)
+cat(paste("The result of", a, "+", b, "is", result_addition, "\n"))
