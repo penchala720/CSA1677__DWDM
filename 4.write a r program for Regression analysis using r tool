@@ -1,0 +1,19 @@
+# Load the necessary libraries
+library(tidyverse)
+
+# Load the data
+data <- read.csv("your_data.csv")
+
+# Fit the linear regression model
+fit <- lm(dependent_variable ~ independent_variable1 + independent_variable2 + ..., data = data)
+
+# Summarize the model
+summary(fit)
+
+# Plot the relationship between the dependent variable and independent variable(s)
+ggplot(data, aes(x = independent_variable1, y = dependent_variable)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  ggtitle("Linear Regression Model") +
+  xlab("Independent Variable 1") +
+  ylab("Dependent Variable")
